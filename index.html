@@ -2,6 +2,8 @@
     <head>
         <title>Google Images</title>
         <link rel="icon" href="/path/to/favicon.ico">
+        <script src="https://kit.fontawesome.com/8511459198.js" crossorigin="anonymous"></script>
+
     </head>
     <style>
 
@@ -25,7 +27,7 @@
        }
        #search-input{
         width: 60%;
-        max-width: 450px;
+        max-width: 500px;
         padding: 10px 20px;
         border: 10px;
         /* border-radius: 10px; */
@@ -120,18 +122,27 @@
             display:none;
         }
        }
+       .ddl{
+        margin-top: 100px;
+        margin-bottom: 50px;
+       }
     </style>
     <body class="bd" style="background-color: #202124;">
+        <img class="lo" style="margin-top: 20px; margin-left: 20px;" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-file-google-images-logo-svg-wikimedia-commons-25.png" alt="" height="" width="200px">
+
         <!-- <a href="index.html" style="text-decoration: none; color: black;"><h1>Image Search Site</h1></a> -->
 
+        <div class="ddl" style="display: flex; align-items: center; justify-content: center;">
+            <img src="https://lh3.googleusercontent.com/Ou4hCFWOwXQxBeexRUVnvh0w40MrlLBz5Tqvm52L7El0c5GGRBNdBm3uMHPCKix20jTzK_gdI0F-RCJcq33Q6mUKntXduiaa_DS3WFo" alt="" height="200px">
 
-        <a href="index.html"><div class="ggl" style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px; margin-top: 80px;">
-            <img src="file:///users/shivasharan/desktop/ggle.png" alt="" height="" width="360px">
-        </div></a>
+        </div>
+        <!-- <a href="index.html"><div class="ggl" style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px; margin-top: 80px;">
+            <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-file-google-images-logo-svg-wikimedia-commons-25.png" alt="" height="" width="360px">
+        </div></a> -->
 
         <form action="">
             <input type="text" id="search-input" placeholder="Search for Images" >
-            <button id="search-button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/640px-Google_mic.svg.png" alt="" height="18px"><img src="file:///users/shivasharan/Downloads/pngwing.com (5).png" alt="" height="19px" style="margin-left: 5px;"></button>
+            <button id="search-button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/640px-Google_mic.svg.png" alt="" height="16px"> &nbsp;<i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
             <div class="search-results">
                 <!-- <div class="search-result">
@@ -162,7 +173,6 @@
             <button id="show-more-button">
                 Show more
             </button>
-
 
             <footer class="ftr" style="margin-top: 410px;">
                 <div class="ind" style="background-color: black; color: #9AA0A6; font-size: 30px; padding-left: 50px; font-family: Arial, Helvetica, sans-serif;">
