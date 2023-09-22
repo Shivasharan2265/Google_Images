@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>Google Images</title>
+        <link rel="icon" href="/path/to/favicon.ico">
+    </head>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+       form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       #search-input{
+        width: 60%;
+        max-width: 450px;
+        padding: 10px 20px;
+        border: 10px;
+        /* border-radius: 10px; */
+        box-shadow: 0 0 6px whitesmoke;
+        background-color: #202124;
+        color: whitesmoke;
+        font-size: 16px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 50px;
+
+       }
+       #search-button{
+        background-color: #202124;
+        padding: 10px 20px;
+        color: whitesmoke;
+        border: 10px;
+        font-size: 17px;
+        box-shadow: 0 0 6px whitesmoke;
+        cursor: pointer;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-bottom: 50px;
+       }
+       .search-results { 
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+        color: whitesmoke;
+       }
+       .search-result{
+        margin-bottom: 60px;
+        width: 30%;
+        height: 100%;
+        box-shadow: 0 0 8px whitesmoke;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       .search-result img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: opacity 0.1s ease-in-out;
+       }
+       .search-result:hover img{
+        opacity: 0.8;
+       }
+       .search-result a{
+        font-size: 15px;
+        text-decoration: none;
+        color: whitesmoke;
+        display: block;
+        padding: 10px;
+        text-transform: capitalize;
+       }
+       #show-more-button{
+        background-color: #202124;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        box-shadow: 0 0 6px whitesmoke;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        display: block;
+        margin: 30px auto;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+       }
+       @media screen and (max-width: 768px) {
+        .search-result{
+            width: 45%;
+        }
+        .ftr {
+            display:none;
+            
+        }
+       }
+       @media screen and (max-width: 480px) {
+        .search-results {
+            padding: 20px;
+        }
+        .search-result{
+            width: 100%;
+        }
+        .ftr {
+            display:none;
+        }
+       }
+    </style>
+    <body class="bd" style="background-color: #202124;">
+        <!-- <a href="index.html" style="text-decoration: none; color: black;"><h1>Image Search Site</h1></a> -->
+
+
+        <a href="index.html"><div class="ggl" style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px; margin-top: 80px;">
+            <img src="file:///users/shivasharan/desktop/ggle.png" alt="" height="" width="360px">
+        </div></a>
+
+        <form action="">
+            <input type="text" id="search-input" placeholder="Search for Images" >
+            <button id="search-button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/640px-Google_mic.svg.png" alt="" height="18px"><img src="file:///users/shivasharan/Downloads/pngwing.com (5).png" alt="" height="19px" style="margin-left: 5px;"></button>
+        </form>
+            <div class="search-results">
+                <!-- <div class="search-result">
+                    <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="Sea" >
+                    <a href="https://unsplash.com/photos/b8kEUZqMNoQ" target="_blank">Sea</a>
+                </div>
+                <div class="search-result">
+                    <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="Sea">
+                    <a href="https://unsplash.com/photos/b8kEUZqMNoQ" target="_blank">Sea</a>
+                </div>
+                <div class="search-result">
+                    <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="Sea">
+                    <a href="https://unsplash.com/photos/b8kEUZqMNoQ" target="_blank">Sea</a>
+                </div>
+                <div class="search-result">
+                    <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="Sea" >
+                    <a href="https://unsplash.com/photos/b8kEUZqMNoQ" target="_blank">Sea</a>
+                </div>
+                <div class="search-result">
+                    <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="Sea">
+                    <a href="https://unsplash.com/photos/b8kEUZqMNoQ" target="_blank">Sea</a>
+                </div>
+                <div class="search-result">
+                    <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80" alt="Sea">
+                    <a href="https://unsplash.com/photos/b8kEUZqMNoQ" target="_blank">Sea</a>
+                </div> -->
+            </div>
+            <button id="show-more-button">
+                Show more
+            </button>
+
+
+            <footer class="ftr" style="margin-top: 410px;">
+                <div class="ind" style="background-color: black; color: #9AA0A6; font-size: 30px; padding-left: 50px; font-family: Arial, Helvetica, sans-serif;">
+                    <p><img src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp" alt="" height="17px">&nbsp;India</p>
+                </div>
+                <hr>
+                <div class="ft" style="display: flex; justify-content: space-around; color: #9AA0A6; background-color: black; font-size: 19px; font-family: Arial, Helvetica, sans-serif; ">
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>About</p></a>
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>Advertising</p></a>
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>Business</p></a>
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>How search works</p></a>
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>Privacy</p></a>
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>Terms & Conditions</p></a>
+                    <a href="" style="text-decoration: none; color: #9AA0A6;"><p>Settings</p></a>
+
+                </div>
+            </footer>
+
+
+
+
+
+
+
+
+
+
+        <script>
+            const accessKey = "ITpd4INbNf-rz4Sg-DZnkSz1xibNqAwpf9BGNZOvQKw";
+
+            const formEl = document.querySelector("form");
+            const inputEl = document.getElementById("search-input");
+            const searchResults = document.querySelector(".search-results");
+            const showMore = document.getElementById("show-more-button");
+
+            let inputData = "";
+            let page = 1;
+            
+            async function searchImages() {
+                inputData = inputEl.value;
+                const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
+            
+                const response = await fetch(url);
+                const data = await response.json();
+
+                const results = data.results;
+
+                if(page === 1) {
+                    searchResults.innerHTML = "";
+                }
+                results.map((result) => {
+                    const imageWrapper = document.createElement('div');
+                    imageWrapper.classList.add("search-result");
+                    const image = document.createElement('img');
+                    image.src = result.urls.small;
+                    image.alt = result.alt_description;
+                    const imageLink = document.createElement('a');
+                    imageLink.href = result.links.html;
+                    imageLink.target = "_blank";
+                    imageLink.textContent = result.alt_description;
+
+                    imageWrapper.appendChild(image);
+                    imageWrapper.appendChild(imageLink);
+                    searchResults.appendChild(imageWrapper);
+
+
+                });
+
+                page++
+                if(page > 1){
+                    showMore.style.display = "block";
+                }
+            }
+
+            formEl.addEventListener("submit", (event) => {
+                event.preventDefault();
+                page = 1;
+                searchImages();
+            });
+            showMore.addEventListener("click", () =>{
+                
+                searchImages();
+            });
+        </script>
+    </body>
+</html>
